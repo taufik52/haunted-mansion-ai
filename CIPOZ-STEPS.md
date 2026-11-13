@@ -16,15 +16,25 @@ Jangan tunggu tenggat: permintaan kredit direview ~48 jam kerja dan
 first-come-first-served — ajukan secepatnya setelah login. Kredit yang sudah
 di-redeem berlaku sampai 31 Des 2026.
 
-## Yang sudah siap (dikerjakan agen, 12 Nov 2026)
+## Yang sudah siap (dikerjakan agen, 12 Nov 2026; diverifikasi ulang 13 Nov 2026)
 
-- `npm test` — **13/13 lolos** (dijalankan ulang hari ini, Node v24.22.1).
+- `npm test` — **13/13 lolos** (dijalankan ulang 13 Nov, Node v24.22.1).
 - Smoke E2E server lokal — `GET /` 200 (judul "Haunted Mansion AI"),
-  `/healthz` `{"status":"ok"}`, path tak dikenal 404, JS/CSS 200.
+  `/healthz` `{"status":"ok"}`, path tak dikenal 404, JS/CSS 200
+  (dijalankan ulang 13 Nov).
 - **App LIVE:** https://haunted-mansion-ai.netlify.app — deploy statis gratis
-  (folder `public/`), terverifikasi publik tanpa login (root 200, JS/CSS 200).
+  (folder `public/`), terverifikasi publik tanpa login (root 200, JS/CSS 200;
+  dicek ulang 13 Nov). CDN Leaflet 1.9.4 (unpkg, JS+CSS 200) dan tile
+  OpenStreetMap (200) juga terverifikasi hidup 13 Nov.
   Catatan: `/healthz` hanya ada di server lokal (`npm start`), bukan di host
   statis — app-nya sendiri 100% client-side jadi jalan penuh di Netlify.
+- **Repo lokal SIAP PUSH:** `git init` + commit awal sudah dibuat 13 Nov
+  (`6bc5b41`, branch `main`, pesan "Haunted Mansion AI — Kiroween 2026
+  (Frankenstein)"). Semua file ter-commit, `.kiro/` ikut ter-track dan
+  TIDAK di-ignore (aturan Kiroween). Cipoz tinggal buat repo kosong di
+  GitHub + `git remote add origin` + `git push` (lihat Langkah 4 yang
+  sudah dipersingkat di bawah). Belum ada remote — tidak ada yang ter-push
+  ke mana pun.
 - `.kiro/` lengkap dan konsisten: steering (`product.md`, `tech.md`,
   `structure.md`), specs (`requirements.md`, `design.md`, `tasks.md` —
   2 kalimat yang kedaluwarsa di `design.md` sudah diperbaiki), hooks
@@ -93,23 +103,19 @@ transkrip/ringkasan sesi tersebut — ini bukti pemakaian Kiro yang jujur untuk
 juri. Bila ada perubahan kode dari sesi Kiro, agen akan menjalankan ulang
 `npm test` + redeploy ke Netlify.
 
-## Langkah 4 — Buat repo GitHub publik + push (10 menit)
+## Langkah 4 — Buat repo GitHub publik + push (5 menit — commit lokal sudah siap)
 
 Hanya Cipoz yang bisa membuat repo di akunnya. Di https://github.com/new:
 
 - Repository name: `haunted-mansion-ai`
 - Visibility: **Public**
 - Jangan centang "Add a README" / .gitignore / license (semuanya sudah ada di
-  folder lokal).
+  folder lokal, dan commit awal sudah dibuat agen 13 Nov).
 
-Lalu di terminal:
+Lalu di terminal (repo lokal sudah `git init` + commit `6bc5b41`, branch `main`):
 
 ```bash
 cd ~/workspace/kiroween
-git init
-git add .
-git commit -m "Haunted Mansion AI — Kiroween 2026 (Frankenstein)"
-git branch -M main
 git remote add origin https://github.com/taufik52/haunted-mansion-ai.git
 git push -u origin main
 ```
@@ -156,6 +162,7 @@ Upload sebagai **Public** (bukan Unlisted) ke YouTube, lalu isi link-nya ke
 - [ ] Langkah 2: 4.000 kredit diminta (sebelum 2 Des 03:00 WIB) + kode di-redeem
 - [ ] Langkah 3: sesi agen Kiro jalan di repo + `KIRO-USAGE.md` diupdate
 - [ ] Langkah 4: repo GitHub publik, `.kiro/` ter-push, LICENSE MIT terdeteksi
+      (commit lokal `6bc5b41` sudah siap — tinggal buat repo kosong + push)
 - [ ] Langkah 5: video YouTube < 3 menit, Public
 - [ ] Langkah 6: submit Devpost sebelum 5 Des 05:00 WIB (kategori Frankenstein)
 

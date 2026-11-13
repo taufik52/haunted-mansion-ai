@@ -79,7 +79,8 @@ runner), vanilla HTML/CSS/JS, Leaflet + OpenStreetMap (map tiles only).
 - [ ] Public GitHub repo, MIT LICENSE visible in About, `/.kiro` NOT in .gitignore
 - [x] Live app URL works (judges can open it with no login) —
       https://haunted-mansion-ai.netlify.app (verified 12 Nov 2026: root 200,
-      JS/CSS 200; static host, no login wall)
+      JS/CSS 200; re-verified 13 Nov 2026: root/JS 200, Leaflet CDN + OSM
+      tiles 200; static host, no login wall)
 - [ ] YouTube demo video < 3 min, public
 - [ ] Kiro login done; agent session run inside the repo (update KIRO-USAGE.md)
 - [ ] 4,000 free Kiro credits requested before 1 Dec 2026 12:00 PT (ID
