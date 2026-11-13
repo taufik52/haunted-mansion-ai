@@ -1,0 +1,1 @@
+{"$schema":"https://kiro.dev/schemas/hooks.json","hooks":[{"description":"Run the test suite whenever a JS file under lib/, public/js/ or test/ is saved.","enabled":true,"name":"run-tests-on-save","then":[{"command":"npm test","timeoutMs":60000,"type":"command"}],"when":{"patterns":["lib/**/*.js","public/js/**/*.js","test/**/*.js"],"type":"fileSaved"}}]}

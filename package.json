@@ -1,0 +1,1 @@
+{"description":"Interactive horror story generator, haunted mansion explorer, and trick-or-treat map. Kiroween 2026, Frankenstein track.","engines":{"node":">=18"},"license":"MIT","name":"haunted-mansion-ai","private":true,"scripts":{"start":"node server.js","test":"node --test"},"version":"0.1.0"}

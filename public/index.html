@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haunted Mansion AI — Interactive Horror Stories &amp; Trick-or-Treat Map</title>
+<meta name="description" content="Generate an interactive horror story, explore a haunted mansion, and plan your trick-or-treat route. Built for Kiroween 2026.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <h1>🎃 Haunted Mansion AI 👻</h1>
+  <p class="tagline">Interactive horror stories &middot; a mansion to explore &middot; a trick-or-treat map</p>
+  <p class="track">Kiroween 2026 &middot; Frankenstein track &middot; built with Kiro</p>
+  <label class="sound-toggle"><input type="checkbox" id="soundToggle"> 🔊 Spooky sounds (state only)</label>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button class="tab active" data-tab="story" role="tab">📖 Story Generator</button>
+  <button class="tab" data-tab="mansion" role="tab">🏚️ Mansion Explorer</button>
+  <button class="tab" data-tab="map" role="tab">🗺️ Trick-or-Treat Map</button>
+</nav>
+
+<main>
+  <!-- STORY -->
+  <section id="tab-story" class="panel active">
+    <h2>Generate your horror story</h2>
+    <div class="pickers">
+      <label>Setting
+        <select id="settingSelect"></select>
+      </label>
+      <label>Monster
+        <select id="monsterSelect"></select>
+      </label>
+      <label>Twist
+        <select id="twistSelect"></select>
+      </label>
+      <label>Seed
+        <input type="number" id="seedInput" value="13" min="0" max="9999">
+      </label>
+      <button id="generateBtn" class="btn primary">🕯️ Generate story</button>
+      <button id="surpriseBtn" class="btn">🎲 Surprise me</button>
+    </div>
+    <div id="storyOutput" class="story-output" aria-live="polite">
+      <p class="hint">Pick a setting, a monster and a twist — then press Generate. Same choices + same seed = the same story, every time.</p>
+    </div>
+    <div id="storyLogWrap" class="story-log-wrap" hidden>
+      <h3>Your choices</h3>
+      <ol id="storyLog" class="story-log"></ol>
+    </div>
+  </section>
+
+  <!-- MANSION -->
+  <section id="tab-mansion" class="panel">
+    <h2>Explore the mansion</h2>
+    <p>Visit every room, collect its item, and earn the <strong>Master of the Mansion</strong> badge.</p>
+    <div id="badge" class="badge" hidden>🏆 Master of the Mansion — every room looted!</div>
+    <div id="roomGrid" class="room-grid"></div>
+    <div id="roomDetail" class="room-detail" aria-live="polite">
+      <p class="hint">Choose a room to explore it.</p>
+    </div>
+    <h3>Inventory (<span id="invCount">0</span>/6)</h3>
+    <ul id="inventory" class="inventory"><li class="hint">Nothing collected yet.</li></ul>
+  </section>
+
+  <!-- MAP -->
+  <section id="tab-map" class="panel">
+    <h2>Trick-or-treat map — Salem, MA (demo neighbourhood)</h2>
+    <p>All houses are fictional demo data, so the map works anywhere.</p>
+    <div class="map-controls">
+      <label>Minimum candy rating
+        <select id="candyFilter">
+          <option value="1">🎃 1+ (show all)</option>
+          <option value="3">🎃🎃🎃 3+</option>
+          <option value="4">🎃🎃🎃🎃 4+</option>
+          <option value="5">🎃🎃🎃🎃🎃 5 only</option>
+        </select>
+      </label>
+      <button id="bestRouteBtn" class="btn primary">🗺️ Best route (top candy first)</button>
+    </div>
+    <div id="map" class="map"></div>
+    <p id="mapFallback" class="map-fallback" hidden>⚠️ Map tiles could not load (offline) — the full house list below has the same details.</p>
+    <ol id="houseList" class="house-list"></ol>
+  </section>
+</main>
+
+<footer>
+  <p>Haunted Mansion AI — Kiroween 2026. Stories are generated deterministically on your device (seeded templates, no external AI service). Houses are fictional demo data. <a href="https://github.com/">Source (MIT)</a> — repo link goes here on publish.</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/story-engine.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+# NOTE: .kiro/ is intentionally NOT ignored — Kiroween rules disqualify
+# submissions that add /.kiro to .gitignore.
+
+# Local Netlify folder
+.netlify
