@@ -52,8 +52,7 @@ Builder ID account); no Kiro credits were used.
 
 ## Links (fill in before submitting)
 
-- Public GitHub repo: [TODO — create public repo under the entrant's account,
-  push this folder, MIT license detectable in About]
+- Public GitHub repo: https://github.com/taufik52/haunted-mansion-ai (public, MIT license)
 - Live app URL: **https://haunted-mansion-ai.netlify.app** (deployed 12 Nov 2026
   via Netlify, static hosting of `public/` — the app is fully client-side, so
   it runs as-is; `/healthz` exists only on the local `npm start` server, not on
@@ -63,7 +62,7 @@ Builder ID account); no Kiro credits were used.
 ## How to run (for judges)
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/taufik52/haunted-mansion-ai.git
 cd haunted-mansion-ai
 npm start        # http://localhost:3000
 npm test         # 13 tests, all passing
@@ -76,7 +75,8 @@ runner), vanilla HTML/CSS/JS, Leaflet + OpenStreetMap (map tiles only).
 
 ## Checklist before submit
 
-- [ ] Public GitHub repo, MIT LICENSE visible in About, `/.kiro` NOT in .gitignore
+- [x] Public GitHub repo, MIT LICENSE visible in About, `/.kiro` NOT in .gitignore
+      — https://github.com/taufik52/haunted-mansion-ai (verified public, MIT)
 - [x] Live app URL works (judges can open it with no login) —
       https://haunted-mansion-ai.netlify.app (verified 12 Nov 2026: root 200,
       JS/CSS 200; re-verified 13 Nov 2026: root/JS 200, Leaflet CDN + OSM
