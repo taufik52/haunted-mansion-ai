@@ -7,7 +7,7 @@ seemingly incompatible pieces: a deterministic interactive horror-story generato
 a haunted-mansion room explorer, a trick-or-treat neighbourhood map, and a spooky
 Halloween UI.
 
-**Live demo:** https://haunted-mansion-ai.netlify.app (no login needed).
+**Live demo:** https://haunted-mansion-ai-2.netlify.app (no login needed).
 
 ## Run it (30 seconds, no accounts, no keys)
 

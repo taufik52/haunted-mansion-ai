@@ -53,7 +53,7 @@ Builder ID account); no Kiro credits were used.
 ## Links (fill in before submitting)
 
 - Public GitHub repo: https://github.com/taufik52/haunted-mansion-ai (public, MIT license)
-- Live app URL: **https://haunted-mansion-ai.netlify.app** (deployed 12 Nov 2026
+- Live app URL: **https://haunted-mansion-ai-2.netlify.app** (deployed 17 Nov 2026
   via Netlify, static hosting of `public/` — the app is fully client-side, so
   it runs as-is; `/healthz` exists only on the local `npm start` server, not on
   the static host)
@@ -78,9 +78,10 @@ runner), vanilla HTML/CSS/JS, Leaflet + OpenStreetMap (map tiles only).
 - [x] Public GitHub repo, MIT LICENSE visible in About, `/.kiro` NOT in .gitignore
       — https://github.com/taufik52/haunted-mansion-ai (verified public, MIT)
 - [x] Live app URL works (judges can open it with no login) —
-      https://haunted-mansion-ai.netlify.app (verified 12 Nov 2026: root 200,
-      JS/CSS 200; re-verified 13 Nov 2026: root/JS 200, Leaflet CDN + OSM
-      tiles 200; static host, no login wall)
+      https://haunted-mansion-ai-2.netlify.app (verified 17 Nov 2026: root 200,
+      footer links repo; static host, no login wall. Old URL
+      haunted-mansion-ai.netlify.app still serves the previous version from the
+      ocilkecil12 account, which is out of deploy credits)
 - [ ] YouTube demo video < 3 min, public
 - [ ] Kiro login done; agent session run inside the repo (update KIRO-USAGE.md)
 - [ ] 4,000 free Kiro credits requested before 1 Dec 2026 12:00 PT (ID
