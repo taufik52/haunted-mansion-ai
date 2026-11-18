@@ -13,20 +13,33 @@ at the repo root showing specs, hooks and steering.
 
 ## What actually happened on this project
 
-### 1. Kiro CLI — installed, verified, NOT logged in
+### 1. Kiro CLI — installed, verified, logged in (19 Nov 2026)
 
 - Official installer ran clean on this VM (Ubuntu 24.04.5 LTS, glibc 2.39):
   `curl -fsSL https://cli.kiro.dev/install | bash`
 - Result: `kiro-cli 3.2.1` installed to `~/.local/bin/kiro-cli` (221 MB binary),
   verified with `kiro-cli --version` and `kiro-cli --help` on 2026-11-12.
-- `kiro-cli whoami` → **"Not logged in"**.
-- **Login was deliberately NOT performed.** `kiro-cli login` requires signing in
-  with the entrant's own GitHub, Google or AWS Builder ID account in a browser.
-  The build instructions for this project forbade creating any AWS account and
-  forbade using the entrant's credentials. Therefore **no Kiro agent session
-  (chat/CLI/IDE) ever ran code on this project**. The CLI binary is installed
-  and ready; the entrant (Cipoz) can run `kiro-cli login` and then `kiro-cli`
-  inside the repo to continue development with the real agent.
+- `kiro-cli whoami` → **"Not logged in"** at first (12 Nov).
+- **Login succeeded 15 Nov 2026** (entrant's own Builder ID, capedong6@gmail.com,
+  via the entrant's browser). Re-verified 19 Nov 2026: `kiro-cli whoami` →
+  "Logged in with Builder ID, Email: capedong6@gmail.com".
+
+### 4. Kiro agent session — 19 Nov 2026 (real session, non-interactive)
+
+- Command (from the repo root, logged in as the entrant):
+  `kiro-cli chat --no-interactive --trust-all-tools --trust-workspace
+  "Review the spec in .kiro/specs/haunted-mansion-ai/ against the code in
+  lib/ and public/js/, then run npm test and fix anything that fails. Do not
+  change the deterministic story generator behavior without updating tests."`
+- The agent read the spec files (requirements, design, tasks) and the code in
+  parallel, then ran the full test suite itself.
+- **Result: 13/13 tests pass, exit 0. No changes made** — the agent found the
+  code matches the spec: mulberry32 PRNG, FNV-1a seed hash, 4×4×4 template
+  tables, 5-chapter assembly, CHOICE_SETS courage model, three endings at
+  ≥+2 / ≤−2 / otherwise; 6 rooms and 10 houses matching Req 2.1 and Req 3.1;
+  `lib/story.js` as the single-line re-export the design calls for.
+- Full session log: `~/workspace/kiro-session-2026-11-19.log` (kept outside the
+  repo).
 
 ### 2. Kiro's spec-driven workflow — followed by hand
 
@@ -57,8 +70,10 @@ the build agent, following Kiro's documented structure exactly:
 
 - Kiro's AI agent did **not** generate any code in this repo: every file was
   written by the build agent following the spec above. The spec/steering/hook
-  artefacts are real and were genuinely used as the build plan, but the
-  "agent executed the spec" step is pending the entrant's login.
+  artefacts are real and were genuinely used as the build plan. A real Kiro
+  agent session ran on 19 Nov 2026 (see section 4) and reviewed the spec
+  against the code + ran the tests — it found everything consistent and made
+  no changes.
 - No Kiro credits were used (none requested — the 4,000-credit request form
   needs the entrant's ID verification, which only Cipoz can do, before
   1 Dec 2026 12:00 PT).
@@ -66,8 +81,8 @@ the build agent, following Kiro's documented structure exactly:
 
 ## Next step for the entrant
 
-1. `kiro-cli login` (GitHub/Google/AWS Builder ID — your own account).
-2. `cd` into this repo, run `kiro-cli`, and ask it to review the spec in
-   `.kiro/specs/haunted-mansion-ai/` against the code and run `npm test`.
-3. That session's transcript + this file together document genuine Kiro usage
-   for the submission write-up.
+1. ~~`kiro-cli login`~~ — done 15 Nov 2026 (Builder ID capedong6@gmail.com).
+2. ~~Run `kiro-cli` in the repo and ask it to review the spec + run `npm test`~~ —
+   done 19 Nov 2026 (see section 4; 13/13 pass, no changes).
+3. Request the 4,000 free Kiro credits before 1 Dec 2026 12:00 PT (ID
+   verification required — entrant's step) and record the demo video.

@@ -46,9 +46,11 @@ Kiro's spec-driven workflow — EARS requirements, design and task checklist in
 `.kiro/specs/haunted-mansion-ai/`, steering rules in `.kiro/steering/`, and a
 run-tests-on-save hook in `.kiro/hooks/`. Verification followed Kiro's
 property-based-testing spirit (determinism over 50 seeds, invariants over all
-64 setting/monster/twist combinations). The Kiro agent session itself is pending
-the entrant's login (`kiro-cli login` needs the entrant's own GitHub/Google/AWS
-Builder ID account); no Kiro credits were used.
+64 setting/monster/twist combinations). The entrant logged in with his own
+Builder ID (15 Nov 2026) and a real Kiro agent session ran in the repo on
+19 Nov 2026: it reviewed the spec against the code and ran the full test
+suite — 13/13 pass, no changes needed. No Kiro credits were used yet (the
+4,000-credit request needs the entrant's ID verification).
 
 ## Links (fill in before submitting)
 
