@@ -59,7 +59,7 @@ suite — 13/13 pass, no changes needed. No Kiro credits were used yet (the
   via Netlify, static hosting of `public/` — the app is fully client-side, so
   it runs as-is; `/healthz` exists only on the local `npm start` server, not on
   the static host)
-- Demo video (< 3 min, public YouTube): [TODO — record per docs/DEMO-SCRIPT.md]
+- Demo video (< 3 min, public YouTube): https://youtu.be/h1WRXHD4A8o (2:30, published 19 Nov 2026, channel "cape dong", Public)
 
 ## How to run (for judges)
 
@@ -84,7 +84,7 @@ runner), vanilla HTML/CSS/JS, Leaflet + OpenStreetMap (map tiles only).
       footer links repo; static host, no login wall. Old URL
       haunted-mansion-ai.netlify.app still serves the previous version from the
       ocilkecil12 account, which is out of deploy credits)
-- [ ] YouTube demo video < 3 min, public
+- [x] YouTube demo video < 3 min, public — https://youtu.be/h1WRXHD4A8o (2:30, published 19 Nov 2026)
 - [ ] Kiro login done; agent session run inside the repo (update KIRO-USAGE.md)
 - [ ] 4,000 free Kiro credits requested before 1 Dec 2026 12:00 PT (ID
       verification required — entrant's step)
